@@ -1,0 +1,14 @@
+body{
+    font-family: 'Corben', cursive;
+}
+
+#title, #button-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#random-answer {
+    text-align: center;
+}
