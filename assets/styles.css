@@ -1,12 +1,22 @@
 body{
     font-family: 'Corben', cursive;
+    background-image: url("./images/notebookPaper.jpeg");
+    background-size: 100%;
 }
+
+
 
 #title, #button-div {
     display: flex;
     align-items: center;
     justify-content: center;
     
+}
+
+#title {
+    width: 70%;
+    margin: auto;
+    text-align: center;
 }
 
 #random-answer {

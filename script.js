@@ -4,7 +4,7 @@ let answerDiv = document.body.querySelector("#random-answer");
 
 //creating arrays of random values to use for page
 let subjectOne= ["dinosaur", "cow", "race car", "sun", "mouse", "baby", "basketball", "gladiator", "ice cream truck", "fish", "spaceship", "zombie", "skateboard"];
-let actionOne= ["eating", "fighting", "flying", "tackling", "smelling", "jumping over", "cooking", "wrestling", "tickling", "scratching", "watching a movie with", "coloring", "sleeping with", "" ];
+let actionOne= ["eating", "fighting", "flying", "tackling", "smelling", "jumping over", "cooking", "wrestling", "tickling", "scratching", "watching a movie with", "coloring", "sleeping with", "singing to" ];
 let subjectTwo= ["a clown car", "a nerf gun", "a swimming pool", "a jellyfish", "a taco", "a dog", "a stoplight"];
 
 let generatedAnswer = [];
@@ -22,8 +22,21 @@ generateButton.addEventListener("click", function(){
     drawingIdea.setAttribute("class", "picture")
     //add the text value of generatedAnswer to the H3 element
     drawingIdea.innerHTML = `Draw a ` + generatedAnswer;
+    //create button to search image on google
+    let searchButton = document.createElement("button");
+    //set ID of button
+    searchButton.setAttribute("id", drawingIdea)
+    //Set text content of button
+    searchButton.textContent = 'Google it';
+    //a click event listener for button
+    searchButton.addEventListener("click", function() {
+        console.log("Button Clicked!");
+        //open new tab and search answer on google
+        window.open('http://google.com/search?q=' + randomAnswer)
+    })
+
     //add the h3 to the page
-    answerDiv.prepend(drawingIdea)
+    answerDiv.prepend(drawingIdea, searchButton)
     console.log(randomAnswer);
     console.log(generatedAnswer);
 
