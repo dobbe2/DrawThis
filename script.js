@@ -3,7 +3,7 @@ let generateButton = document.body.querySelector("#generate-button");
 let answerDiv = document.body.querySelector("#random-answer");
 
 //creating arrays of random values to use for page
-let subjectOne= ["dinosaur", "cow", "race car", "sun", "mouse", "baby", "basketball", "gladiator", "ice cream truck", "fish", "spaceship", "zombie", "skateboard"];
+let subjectOne= ["a dinosaur", "a cow", "a race car", "a sun", "a mouse", "a baby", "a basketball", "a gladiator", "an ice cream truck", "a fish", "a spaceship", "a zombie", "a skateboard"];
 let actionOne= ["eating", "fighting", "flying", "tackling", "smelling", "jumping over", "cooking", "wrestling", "tickling", "scratching", "watching a movie with", "coloring", "sleeping with", "singing to" ];
 let subjectTwo= ["a clown car", "a nerf gun", "a swimming pool", "a jellyfish", "a taco", "a dog", "a stoplight"];
 
@@ -21,7 +21,7 @@ generateButton.addEventListener("click", function(){
     //set class of drawing to .picture
     drawingIdea.setAttribute("class", "picture")
     //add the text value of generatedAnswer to the H3 element
-    drawingIdea.innerHTML = `Draw a ` + generatedAnswer;
+    drawingIdea.innerHTML = `Draw ` + generatedAnswer;
     //create button to search image on google
     let searchButton = document.createElement("button");
     //set ID of button

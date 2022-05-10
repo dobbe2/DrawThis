@@ -2,8 +2,25 @@ body{
     font-family: 'Corben', cursive;
     background-image: url("./images/notebookPaper.jpeg");
     background-size: 100%;
+    padding: 25px;
 }
 
+
+#generate-button{
+    margin: 20px;
+    font-size: 2em;
+    border-radius: 10px;
+    background-color: skyblue;
+    color: red;
+    -webkit-transition: 1s;
+    cursor: pointer;
+}
+
+#generate-button:hover {
+    background-color: red;
+    color: skyblue;
+    -webkit-transition: .5s;
+}
 
 
 #title, #button-div {
