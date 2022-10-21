@@ -53,3 +53,19 @@ body{
         opacity: 1;
     }
 }
+
+.drawTools {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.drawButtons {
+    border-radius: 8px;
+}
+
+.canvas-container {
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: 5px 5px 10px rgb(100, 100, 100);
+}

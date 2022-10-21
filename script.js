@@ -1,11 +1,12 @@
+
 //setting variables for the HTML elements
 let generateButton = document.body.querySelector("#generate-button");
 let answerDiv = document.body.querySelector("#random-answer");
 
 //creating arrays of random values to use for page
-let subjectOne= ["a dinosaur", "a cow", "a race car", "a sun", "a mouse", "a baby", "a basketball", "a gladiator", "an ice cream truck", "a fish", "a spaceship", "a zombie", "a skateboard"];
-let actionOne= ["eating", "fighting", "flying", "tackling", "smelling", "jumping over", "cooking", "wrestling", "tickling", "scratching", "watching a movie with", "coloring", "sleeping with", "singing to" ];
-let subjectTwo= ["a clown car", "a nerf gun", "a swimming pool", "a jellyfish", "a taco", "a dog", "a stoplight"];
+let subjectOne= ["a dinosaur", "a cow", "a race car", "a sun", "a mouse", "a baby", "a basketball", "a gladiator", "an ice cream truck", "a fish", "a spaceship", "a zombie", "a skateboard", "a mushroom", "a plumber"];
+let actionOne= ["eating", "fighting", "flying", "tackling", "smelling", "jumping over", "cooking", "wrestling", "tickling", "scratching", "watching a movie with", "coloring", "sleeping with", "singing to", "holding hands with", "studying with", "having a cup of coffee with" ];
+let subjectTwo= ["a clown car", "a nerf gun", "a swimming pool", "a jellyfish", "a taco", "a dog", "a stoplight", "a turtle", "a bottle of water", "a school bus", "a monkey", "a banana", "an egg"];
 
 let generatedAnswer = [];
 //creating a listener for our random generator
@@ -41,3 +42,35 @@ generateButton.addEventListener("click", function(){
     console.log(generatedAnswer);
 
 })
+
+// a cavas to draw on using fabric.js
+const myCanvas = new fabric.Canvas("demoCanvas", {
+    width: window.innerWidth - 200,
+    height: window.innerHeight - 400,
+    backgroundColor: "white",
+    isDrawingMode: true,
+  });
+
+const toggleDraw = () => {
+    myCanvas.set({ isDrawingMode: !myCanvas.get("isDrawingMode") });
+};
+
+const createRectangle = () => {
+    const rectangle = new fabric.Rect({
+        width: 100,
+        height: 100,
+    });
+    myCanvas.add(rectangle);
+};
+
+const createTextbox = () => {
+    const textbox = new fabric.Textbox("Hakuna Matata", {
+        width: 400,
+    });
+    myCanvas.add(textbox);
+};
+
+const deleteObject = () => {
+    if(myCanvas.getActiveObject()){ myCanvas.remove(myCanvas.getActiveObject());
+    }
+}

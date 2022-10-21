@@ -6,6 +6,7 @@
     <title>Random drawing idea generator</title>
     <link rel="stylesheet" href="./assets/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Corben:wght@700&display=swap" rel="stylesheet">
+    <script src="./fabric.js"></script>
 </head>
 <body>
     <h1 id="title">Random Drawing Idea Generator</h1>
@@ -16,6 +17,19 @@
 
     <div id="random-answer"></div>
 
+    <div class="canvasMain">
+        <div class="drawTools">
+            <button class="drawButtons" onclick="toggleDraw()">Draw &#9998;</button>
+            <button class="drawButtons" onclick="createRectangle()">Rect &#9982;</button>
+            
+            <button class="drawButtons" onclick="createTextbox()"> Text box</button>
+             <button class="drawButtons" onclick="deleteObject()"> Delete &#10006</button>
+          </div>
+          <canvas id="demoCanvas"/>
+    </div>
+    
+
     <script src="./script.js"></script>
+    
 </body>
 </html>
