@@ -6,4 +6,5 @@ Inspiration: My daughter asked me to give her an idea of something to draw. I th
 
 Added a canvas drawing board using fabric.js. The user can create drawings on this using a drawing pencil, a rectrangle tool, and a text box.
 
-[Imgur](https://i.imgur.com/yjyaTRF.png)
+<!-- [Imgur](https://i.imgur.com/yjyaTRF.png) -->
+<a href="https://i.imgur.com/yjyaTRF.png"><img src="https://i.imgur.com/yjyaTRF.png" title="source: imgur.com" /></a>
